@@ -10,23 +10,53 @@
     "@types/node": "^12.20.7",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "typescript": "^4.2.4",
-    "web-vitals": "^1.1.1"
+    "typescript": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "fix": "npm run lint -- --fix"
   },
   "eslintConfig": {
     "extends": [
+      "standard-with-typescript",
+      "standard-jsx",
+      "standard-react",
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "order": "asc"
+          }
+        }
+      ],
+      "import/no-default-export": "error",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-max-props-per-line": "error",
+      "react/prop-types": "off"
+    }
   },
   "browserslist": {
     "production": [
