@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { generatePath, useParams } from 'react-router-dom'
-import { Route } from './Route'
+import { Route } from './Route.component'
 
 export interface RouteDefinitionWithoutParams {
   path: string

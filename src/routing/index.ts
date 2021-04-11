@@ -1,3 +1,3 @@
 export * from './defineRoute'
-export * from './Route'
-export * from './Router'
+export * from './Route.component'
+export * from './Router.component'
