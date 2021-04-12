@@ -1,11 +1,17 @@
 import { FC } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import { Router } from './routing'
+import { MainLayout } from './layout'
+import { Routes } from './routing'
 import { GlobalStyles, theme } from './styling'
 
 export const App: FC = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
-    <Router />
+    <BrowserRouter>
+      <MainLayout>
+        <Routes />
+      </MainLayout>
+    </BrowserRouter>
   </ThemeProvider>
 )
