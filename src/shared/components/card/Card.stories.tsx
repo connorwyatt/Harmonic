@@ -6,6 +6,11 @@ import { CardHeader } from './CardHeader.styles'
 const story: Meta = {
   component: Card,
   title: 'Shared/Card',
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '0 auto', maxWidth: '480px' }}><Story /></div>
+    ),
+  ],
 }
 export default story
 
