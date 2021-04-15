@@ -68,7 +68,7 @@ const seventh: Interval = {
 
 const ninth: Interval = {
   name: 'Ninth',
-  notation:'9',
+  notation: '9',
   semitones: 14,
 }
 

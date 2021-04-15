@@ -112,5 +112,5 @@ export const chords = {
   minorSeventhFlatFive,
   majorNinth,
   ninth,
-  minorNinth
+  minorNinth,
 }
