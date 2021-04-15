@@ -14,14 +14,7 @@ const story: Meta = {
 }
 export default story
 
-interface DefaultProps {
-  showCardHeader: boolean
-  cardHeaderText: string
-  showCardBody: boolean
-  cardBodyText: string
-}
-
-export const Default: Story<DefaultProps> = () => (
+export const Default: Story = () => (
   <Card>
     <CardHeader>Title</CardHeader>
     <CardBody>
