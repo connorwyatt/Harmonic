@@ -14,7 +14,7 @@ const second: Interval = {
 
 const minorThird: Interval = {
   name: 'Minor Third',
-  notation: '\U+266D3',
+  notation: '♭3',
   semitones: 3,
 }
 
@@ -38,7 +38,7 @@ const sharpFourth: Interval = {
 
 const flatFifth: Interval = {
   name: 'Flat Fifth',
-  notation: '\U+266D5',
+  notation: '♭5',
   semitones: 6,
 }
 
@@ -56,7 +56,7 @@ const sixth: Interval = {
 
 const flatSeventh: Interval = {
   name: 'Flat Seventh',
-  notation: '\U+266D7',
+  notation: '♭7',
   semitones: 10,
 }
 

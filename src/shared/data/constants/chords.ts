@@ -57,8 +57,8 @@ const minorSeventh: Chord = {
 }
 
 const minorSeventhFlatFive: Chord = {
-  name: 'Minor 7th \U+266D5',
-  notation: 'min7\U+266D5',
+  name: 'Minor 7th ♭5',
+  notation: 'min7♭5',
   intervals: [
     intervals.root,
     intervals.minorThird,
