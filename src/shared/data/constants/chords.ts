@@ -56,6 +56,17 @@ const minorSeventh: Chord = {
   ],
 }
 
+const minorSeventhFlatFive: Chord = {
+  name: 'Minor 7th \U+266D5',
+  notation: 'min7\U+266D5',
+  intervals: [
+    intervals.root,
+    intervals.minorThird,
+    intervals.flatFifth,
+    intervals.flatSeventh,
+  ],
+}
+
 const majorNinth: Chord = {
   name: 'Major 9th',
   notation: 'maj9',
@@ -98,6 +109,7 @@ export const chords = {
   majorSeventh,
   dominantSeventh,
   minorSeventh,
+  minorSeventhFlatFive,
   majorNinth,
   ninth,
   minorNinth
