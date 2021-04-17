@@ -74,6 +74,10 @@
           }
         }
       ],
+      "@typescript-eslint/space-before-function-paren": [
+        "error",
+        "never"
+      ],
       "import/no-default-export": "error",
       "react/react-in-jsx-scope": "off",
       "react/jsx-max-props-per-line": "error",
