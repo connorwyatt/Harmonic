@@ -1,7 +1,5 @@
 import { Chord } from '../Chord'
-import {
-  intervals,
-} from './intervals'
+import { intervals } from './intervals'
 
 const major: Chord = {
   name: 'Major',
@@ -103,7 +101,19 @@ const minorNinth: Chord = {
   ],
 }
 
-export const chords = {
+export interface Chords {
+  major: Chord
+  minor: Chord
+  majorSeventh: Chord
+  dominantSeventh: Chord
+  minorSeventh: Chord
+  minorSeventhFlatFive: Chord
+  majorNinth: Chord
+  ninth: Chord
+  minorNinth: Chord
+}
+
+export const chords: Chords = {
   major,
   minor,
   majorSeventh,
