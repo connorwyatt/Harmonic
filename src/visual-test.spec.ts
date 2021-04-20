@@ -6,5 +6,9 @@ initStoryshots({
   suite: 'Visual Test',
   test: imageSnapshot({
     storybookUrl: `file://${path.resolve(__dirname, '../storybook-static')}`,
+    getMatchOptions: () => ({
+      failureThreshold: 0.01,
+      failureThresholdType: 'percent',
+    })
   }),
 })
