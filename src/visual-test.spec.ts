@@ -9,6 +9,6 @@ initStoryshots({
     getMatchOptions: () => ({
       failureThreshold: 0.01,
       failureThresholdType: 'percent',
-    })
+    }),
   }),
 })
