@@ -3,7 +3,7 @@ import initStoryshots from '@storybook/addon-storyshots'
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer'
 
 initStoryshots({
-  suite: 'Visual Test',
+  suite: 'Visual Tests',
   test: imageSnapshot({
     storybookUrl: `file://${path.resolve(__dirname, '../storybook-static')}`,
     getMatchOptions: () => ({
