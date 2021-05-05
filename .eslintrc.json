@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "standard-with-typescript",
+    "standard-jsx",
+    "standard-react",
+    "react-app",
+    "react-app/jest"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "@typescript-eslint/space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "import/no-default-export": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-max-props-per-line": "error",
+    "react/prop-types": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-default-export": "off",
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}

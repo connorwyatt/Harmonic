@@ -26,6 +26,7 @@
     "eslint-config-standard-with-typescript": "^20.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
+    "npm-run-all": "^4.1.5",
     "polished": "^4.1.1",
     "puppeteer": "^3.3.0",
     "react": "^17.0.2",
@@ -33,78 +34,24 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.3",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "wait-on": "^5.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --testPathIgnorePatterns=src/visual-test.spec.ts",
+    "test": "react-scripts test",
     "test:ci": "cross-env CI=true npm test",
-    "test:staged": "cross-env CI=true react-scripts test --testPathIgnorePatterns=src/visual-test.spec.ts --findRelatedTests",
-    "test:coverage": "cross-env CI=true react-scripts test --testPathIgnorePatterns=src/visual-test.spec.ts --coverage",
-    "test:visual": "npm run build-storybook && react-scripts test visual-test.spec.ts",
+    "test:staged": "cross-env CI=true react-scripts test --findRelatedTests",
+    "test:coverage": "cross-env CI=true react-scripts test --coverage",
+    "test:visual": "run-p --race snapshot:*",
     "test:visual:ci": "cross-env CI=true npm run test:visual",
+    "snapshot:prepare": "run-s storybook:dev",
+    "snapshot:test": "wait-on http://localhost:6006 && react-scripts test --testMatch=**/*.runner.ts src/visualTests.runner.ts",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "fix": "npm run lint -- --fix",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": [
-      "standard-with-typescript",
-      "standard-jsx",
-      "standard-react",
-      "react-app",
-      "react-app/jest"
-    ],
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "rules": {
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ],
-      "import/order": [
-        "error",
-        {
-          "alphabetize": {
-            "order": "asc"
-          }
-        }
-      ],
-      "@typescript-eslint/space-before-function-paren": [
-        "error",
-        "never"
-      ],
-      "import/no-default-export": "error",
-      "react/react-in-jsx-scope": "off",
-      "react/jsx-max-props-per-line": "error",
-      "react/prop-types": "off"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-default-export": "off",
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "storybook:dev": "start-storybook -p 6006 -s public",
+    "storybook:build": "build-storybook -s public"
   }
 }
