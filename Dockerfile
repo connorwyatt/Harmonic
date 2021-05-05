@@ -16,10 +16,4 @@ RUN npm run lint
 
 RUN npm run test:ci
 
-COPY ./.storybook ./.storybook
-
-RUN npm run storybook:build
-
-RUN npm run test:visual:ci
-
-RUN npm build
+RUN npm run build

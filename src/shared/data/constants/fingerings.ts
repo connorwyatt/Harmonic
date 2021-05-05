@@ -30,4 +30,44 @@ export const fingerings: Fingering[] = [
     [null, intervals.minorThird, intervals.root, intervals.fifth, intervals.root, null],
     tunings.standard,
   ),
+  Fingering.create(
+    chords.majorSeventh,
+    [null, intervals.majorThird, intervals.seventh, intervals.fifth, intervals.root, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [null, intervals.fifth, intervals.root, intervals.seventh, intervals.majorThird, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [null, intervals.seventh, intervals.majorThird, intervals.root, intervals.fifth, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [null, intervals.root, intervals.fifth, intervals.majorThird, intervals.seventh, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [intervals.majorThird, intervals.seventh, intervals.fifth, intervals.root, null, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [intervals.fifth, intervals.root, intervals.seventh, intervals.majorThird, null, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [intervals.seventh, intervals.majorThird, intervals.root, intervals.fifth, null, null],
+    tunings.standard,
+  ),
+  Fingering.create(
+    chords.majorSeventh,
+    [intervals.root, intervals.fifth, intervals.majorThird, intervals.seventh, null, null],
+    tunings.standard,
+  ),
 ].filter(notNull)
